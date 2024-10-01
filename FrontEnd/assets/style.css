@@ -1,0 +1,556 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+header,
+body,
+main {
+  background-color: rgb(255, 254, 248);
+}
+
+footer {
+  background-color: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/** end reset css**/
+body {
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+}
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+section {
+  margin: 50px 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+
+h1 > span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav li {
+  padding: 0 10px;
+  font-size: 1.2em;
+}
+
+li:hover {
+  color: #b1663c;
+}
+#introduction {
+  display: flex;
+  align-items: center;
+}
+#introduction figure {
+  flex: 1;
+}
+#introduction img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+#introduction article {
+  flex: 1;
+}
+#introduction h2 {
+  margin-bottom: 1em;
+}
+
+#introduction p {
+  margin-bottom: 0.5em;
+}
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 4em;
+  padding-right: 1.5em;
+}
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+}
+#contact {
+  width: 50%;
+  margin: auto;
+}
+#contact > * {
+  text-align: center;
+}
+#contact h2 {
+  margin-bottom: 20px;
+}
+#contact form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+  margin: 2em 0 1em 0;
+}
+#contact textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+}
+
+.filtres {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.filtres button {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: larger;
+  color: #1d6154;
+  background-color: rgb(255, 254, 248);
+  margin: 0.4em;
+  width: auto;
+  min-width: 100px;
+  padding: 8px 12px 8px 12px;
+  text-align: center;
+  border: 1px solid #1d6154;
+  border-radius: 60px;
+}
+
+.clicked {
+  background-color: #1d6154 !important;
+  color: rgb(255, 254, 248) !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#login {
+  width: 40%;
+  margin: auto;
+}
+#login > * {
+  text-align: center;
+}
+
+#login h2 {
+  margin-bottom: 20px;
+}
+#login form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#login input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#login label {
+  margin: 2em 0 1em 0;
+}
+#login textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login p {
+  text-decoration: underline;
+  margin-bottom: 20em;
+}
+
+.projets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modifier {
+  display: none;
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 6.5em;
+  scale: 1.2;
+  font-weight: 500;
+}
+.projets i {
+  padding-right: 0.6em;
+}
+
+.edition {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.edition i {
+  padding-right: 1em;
+}
+
+/* Modal */
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-wrapper {
+  width: 630px;
+  height: 730px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.titre-modal {
+  margin: 20px;
+  color: black;
+  font-size: 28px;
+  font-family: "Work Sans";
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.contenu-modal {
+  display: flex;
+  /* align-items: start; */
+  flex-wrap: wrap;
+  margin: auto;
+  column-gap: 8px;
+  height: 60%;
+  width: 70%;
+  padding-bottom: 30px;
+  border-bottom: solid 2px rgba(108, 122, 137, 0.4);
+}
+.contenu-modal figure {
+  position: relative;
+  width: 81px;
+  height: 120px;
+}
+.contenu-modal figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.contenu-modal figure button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+}
+.contenu-modal figure button i {
+  scale: 0.8;
+}
+
+.btn-modal {
+  position: relative;
+  top: 45px;
+  right: -30%;
+  height: 40px;
+  width: 40%;
+  font-size: 1.2em;
+  font-weight: 500;
+  border: none;
+  border-radius: 24px;
+  background-color: #1d6154;
+  color: #fff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.modal-close {
+  scale: 1.5;
+  background-color: #fff;
+  border: none;
+  position: relative;
+  top: 10px;
+  right: -95%;
+}
+
+/* Modal 2 */
+
+.blockPhoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 45%;
+  background-color: rgb(232, 241, 246);
+}
+.blockPhoto p {
+  font-size: smaller;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.blockPhoto i {
+  scale: 5;
+  color: rgb(185, 197, 204);
+}
+
+.blockPhoto button {
+  font-weight: bold;
+  font-family: "Work Sans";
+  font-size: 1.1em;
+  text-align: center;
+  border: none;
+  border-radius: 24px;
+  color: rgb(67, 116, 143);
+  background-color: rgb(203, 214, 220);
+  width: 45%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+.blockForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+}
+
+.blockForm input {
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.blockForm select {
+  border: none;
+  padding: 10px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.blockForm label {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  color: inherit !important;
+}
+
+#hidden {
+  display: none;
+}
+
+.blockPhoto #previewImage {
+  flex: 1;
+  max-height: 100%;
+  max-width: 80%;
+}
