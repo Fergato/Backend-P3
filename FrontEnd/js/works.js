@@ -243,7 +243,7 @@ btnModal.addEventListener("click", async () => {
   } else {
     if (btnModal.innerText === "Valider") {
       formulaireModalSubmit(); //envoi du formulaire
-      // closeModal();
+      closeModal();
     }
   }
 });
@@ -362,20 +362,10 @@ async function formulaireModalSubmit() {
   let token = JSON.parse(window.localStorage.getItem("token"));
   const file = img.files[0];
   const titre = input.value;
-  const photoCategory = select.value;
+  const photoCategory = parseInt(select.value, 10);
 
   if (!file) {
     alert("Aucun fichier sélectionné.");
-    return;
-  }
-
-  if (!titre) {
-    alert("Veuillez renseigner le titre");
-    return;
-  }
-
-  if (!photoCategory) {
-    alert("Veuillez choisir une catégorie");
     return;
   }
 
@@ -399,9 +389,10 @@ async function formulaireModalSubmit() {
     const request = await fetch("http://localhost:5678/api/works", req);
 
     if (request.ok) {
+      const responseData = await request.json();
+      console.log(responseData, "responseData");
       await appelWorks();
       genererWorks(JSON.parse(window.localStorage.getItem("works")));
-      closeModal();
     } else {
       console.error("Échec du téléchargement. Statut :", request.status);
     }
@@ -449,6 +440,7 @@ function deleteWorks() {
         );
 
         if (response.ok) {
+          console.log("Travail supprimé avec succès !");
           parent.remove();
           closeModal();
         } else {
