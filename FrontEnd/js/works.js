@@ -362,7 +362,7 @@ async function formulaireModalSubmit() {
   let token = JSON.parse(window.localStorage.getItem("token"));
   const file = img.files[0];
   const titre = input.value;
-  const photoCategory = parseInt(select.value, 10);
+  const photoCategory = select.value;
 
   if (!file) {
     alert("Aucun fichier sélectionné.");
